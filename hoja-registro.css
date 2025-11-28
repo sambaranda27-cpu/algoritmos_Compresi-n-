@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ----- Globales ----- */
+body {
+    background: #000;
+    background-image: url("vinilo2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: "Lucida Sans", Verdana, sans-serif;
+}
+
+/* ----- Header ----- */
+header {
+    background: #5779E7;
+    height: 150px;
+    color: aliceblue;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----- Navegación ----- */
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 40px auto;
+    justify-content: center;
+}
+
+.nav li {
+    position: relative;
+    background: #5871E5;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+
+.nav li:hover {
+    background: #B9ABAB;
+    transition: 0.3s;
+}
+
+/* Submenú */
+.nav li ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #222;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.nav li:hover ul {
+    display: block;
+}
+
+.nav li ul li {
+    width: 160px;
+    padding: 10px;
+    background: #5871E5;
+    margin-bottom: 5px;
+}
+
+/* ----- Section ----- */
+section {
+    background: #2E2C2C;
+    min-height: 800px;
+    padding: 50px;
+}
+
+/* ----- Formulario ----- */
+.formulario {
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.formulario input,
+.formulario button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+}
+
+.formulario button {
+    background: #5871E5;
+    color: white;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background: #3d58b0;
+}
+
+/* ----- Redes ----- */
+#redes1, #redes2, #redes3 {
+    width: 60px;
+    height: 60px;
+    margin: 15px;
+}
+
+/* ----- Footer ----- */
+footer {
+    background: #5871E5;
+    color: black;
+    text-align: center;
+    padding: 25px;
+    font-size: 22px;
+}

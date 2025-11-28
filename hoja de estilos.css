@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+body {
+    background:#B8DFF5;
+    margin: 0;
+    font-family: "Lucida Sans", Arial, sans-serif;
+    animation: fadeInBody 1.5s ease-in;
+}
+
+
+#contenedor {
+    background:#6E75ED;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    animation: slideIn 1.2s ease-out;
+}
+
+
+h1, h2, h3 {
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    animation: fadeInUp 1.5s ease;
+}
+
+h1 {
+    background: #FFF3F3;
+}
+
+h2 {
+    background:#3E5D88;
+    color: #fff;
+}
+
+h3 {
+    background: #DFD3D4;
+}
+
+.titulo {
+    background:#115FB1;
+    font-size: 30px;
+    padding: 25px;
+    text-align: center;
+    animation: zoomIn 1.5s ease;
+}
+
+
+.texto, p, li {
+    text-align: justify;
+    font-size: 22px;
+    max-width: 1100px;
+    margin: 20px auto;
+    opacity: 0;
+    animation: fadeAppear 2s forwards;
+}
+
+
+table {
+    width: 100%;
+    border-spacing: 5px;
+    margin: 20px auto;
+    animation: fadeInUp 1.8s ease;
+}
+
+th, td {
+    background-color: lavender;
+    padding: 12px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+    opacity: 0;
+    transform: scale(0.7);
+    animation: zoomFade 1.5s forwards;
+}
+
+
+
+footer {
+    background:#1F3D9B;
+    font-size: 20px;
+    padding: 25px;
+    margin-top: 40px;
+    text-align: center;
+    color:aliceblue;
+    animation: fadeInUp 2s ease;
+}
+
+
+
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-80px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeAppear {
+    to { opacity: 1; }
+}
+
+@keyframes zoomFade {
+    from { opacity: 0; transform: scale(0.7); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

@@ -1,0 +1,473 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>UNIDAD IV COMPRESÓN DE AUDIO.</title>
+	<link rel="stylesheet"
+		  a href="hoja de estilos.css">
+</head>
+
+   
+<body>
+	
+<center>
+<div id="contenedor">
+<img src="audio1.png" heigth="800px" width="1200px"/>
+</div>
+</center>
+
+	<div class="general">
+<br>
+<center>
+<div class="titulo">
+<br><br><strong>
+<h1>4.8.TERMONOLOGÍA. </h1>
+<br><br></strong>
+</div>
+</center>
+<br>
+<br>
+
+
+<section class="texto">
+<div class="subtitulos2">
+<br><strong>
+<h2>Definición. </h2>
+</br></strong>
+</div>
+<br>
+
+<p>La frecuencia de muestreo es el número de muestras de audio que se toman por segundo. La frecuencia de muestreo se mide en hercios (Hz) o en kilohercios (kHz).Por ejemplo, una frecuencia de 16.000 muestras por segundo es igual a 16.000 Hz (o 16 kHz). Con el servicio Speech to Text, se especifica un modelo para indicar
+la frecuencia de muestreo del audio: </p>
+<br>
+
+<ul type="I">
+<p><li>Los modelos de banda ancha y multimedia se utilizan para audio que se muestrea a no menos de 16 kHz, lo que IBM® recomienda para aplicaciones en tiempo real de respuesta (por ejemplo, para aplicaciones de voz en directo).</li>
+<li>Los modelos de banda estrecha y telefonía se utilizan para audio que se muestrea a no menos de 8 kHz, que es la frecuencia que se utiliza normalmente para el audio telefónico.</li>
+</ul></p>
+<br>
+
+<br>
+<p>El servicio da soporte a ambas frecuencias de muestreo para la mayoría de los idiomas y formatos. Ajusta automáticamente la frecuencia de muestreo de su audio para que se adapte al modelo que especifique antes de realizar el reconocimiento de voz.</p>
+
+<ul>
+<p><li>Para los modelos de banda ancha y multimedia, el servicio convierte el audio grabado a mayores frecuencias de muestreo a 16 kHz.</li>
+<li>Para los modelos de banda estrecha y de telefonía, convierte el audio grabado en frecuencias de muestreo más altas a 8 kHz.</li>
+</ul></p>
+<br>
+
+<br>
+<p>Por ejemplo, puede enviar un audio de 44 kHz con cualquier modelo, pero eso aumenta innecesariamente el tamaño del audio. Para maximizar la cantidad de audio que puede enviar, haga coincidir la frecuencia de muestreo de su audio con el modelo que utiliza.
+El servicio no acepta audio muestreado a una frecuencia menor que la frecuencia de muestreo del modelo. Por ejemplo, no puede utilizar un modelo de banda ancha o multimedia para reconocer audio que se muestra a una frecuencia de 8 kHz.
+</p>
+
+<center>
+<br><br>
+<img src="audio2.webp" heigth="1000px" width="1200px"/></br></br>
+</div>
+</center>
+
+<br>
+<center>
+<div class="titulo">
+<br><br><strong>
+<h1>4.9.CODIFICADOR/ DECODIFICADOR(CÓDEC). </h1>
+</br></br></strong>
+</center>
+</div>
+<br>
+<br>
+
+
+<section class="texto">
+<div class="subtitulos2">
+<br><strong>
+<h2>Definición. </h2>
+</br></strong>
+</div>
+<br>
+
+<p>Los formatos de codificación de vídeo, también conocidos como formatos de archivo de vídeo, son métodos para optimizar los archivos de vídeo digital para diferentes plataformas, programas y dispositivos. Hay muchos tipos diferentes de formatos de codificación de vídeo, pero cada uno se compone de dos partes principales: un códec y un contenedor. El códec y el contenedor especifican la forma en que se almacena, transmite y visualiza la entrada de vídeo sin comprimir. En la transmisión, es importante que el formato de codificación sea compatible con el mayor número posible de dispositivos, para que el flujo esté disponible para todos los usuarios.<br>
+Seleccionar el formato de vídeo adecuado depende de tres factores principales: la disponibilidad de almacenamiento, la calidad de la salida de vídeo, y la compatibilidad con diferentes reproductores o programas de vídeo.
+</p>
+<br>
+
+<section class="texto">
+<div class="subtitulos2">
+<br><strong>
+<h2>¿Qué es un códec?. </h2>
+</br></strong>
+</div>
+<br>
+
+<p>Un códec (codificador/decodificador) es un método para comprimir y descomprimir datos para que puedan ser transportados y recibidos fácilmente por diferentes aplicaciones. Se utilizan diferentes códecs para comprimir archivos de audio y vídeo, pero suelen funcionar de la misma manera.
+Los códecs codifican los archivos usando compresión con pérdidas o compresión sin pérdidas. La compresión con pérdidas simplifica los datos de un archivo de vídeo y solo conserva las partes esenciales. Por ello, un vídeo con compresión con pérdidas puede parecer pixelado o "borroso". Imaginemos que Frank decide enviar un vídeo de sus rosales a su hermana: la compresión con pérdidas mostrará con precisión cada rosa, pero puede elegir un único tono de rosa para las flores en lugar de representar las sutiles variaciones de rosa en cada pétalo.
+</p>
+<br>
+
+<center>
+<br><br>
+<img src="codec2.webp" heigth="1000px" width="1200px"/></br></br>
+</div>
+</center>
+
+<section class="texto">
+<div class="subtitulos2">
+<br><strong>
+<h2>Función. </h2>
+</br></strong>
+</div>
+<br>
+
+<p>La codificación de vídeo es el proceso de convertir la entrada de vídeo sin comprimir en una forma que pueda ser almacenada y reproducida por diversos dispositivos. La codificación de vídeo implica dos procesos principales: la compresión y la transcodificación.
+<br><br>
+	<b>Codificación</b>
+	<br>
+Durante este proceso, el códec analiza los datos originales (audio o video) y los comprime utilizando algoritmos específicos. Esto implica eliminar datos redundantes o irrelevantes, como frecuencias que el oído humano no puede percibir en el caso del audio.
+<br><br>
+	<b>Decodificación</b>
+	<br>
+En este paso, los datos comprimidos se reconstruyen para que puedan ser reproducidos o visualizados. El reproductor multimedia (como VLC o Windows Media Player) utiliza el mismo códec para interpretar los datos comprimidos y mostrarlos al usuario.
+</p>
+<br><br>
+
+<section class="texto">
+<div class="subtitulos2">
+<br><strong>
+<h2>Terminos de un Códec. </h2>
+</br></strong>
+</div>
+<br><br>
+<p><b>Índice de compresión:</b> La relación entre el tamaño del archivo comprimido y el tamaño del archivo original. Indica el nivel de compresión alcanzado por un códec.
+<br><br>
+	<b>Bitrate:</b> La cantidad de datos procesados por unidad de tiempo, generalmente medida en kilobits por segundo (kbps) o megabits por segundo (Mbps). Las velocidades de bits más altas generalmente dan como resultado una mejor calidad, pero también requieren más espacio de almacenamiento o ancho de banda.
+<br><br>
+	<b>Formato de contenedor:</b> También conocido como formato de archivo, un formato contenedor es un tipo de archivo que encapsula y organiza audio, video y otros flujos de datos en un solo archivo. Algunos ejemplos son MP4, AVI y MKV.
+</p>
+
+<br><br>
+
+<section class="texto">
+<div class="subtitulos2">
+<br><strong>
+<h2>CÓDEC CON PERDIDA DE INFORMACIÓN. </h2>
+</br></strong>
+</div>
+<br>
+<br>
+<p>Los codecs con pérdida son más comunes que los codecs lossless. Los codecs con pérdida comprimen la información en archivos pequeños, haciendo que haya una pérdida en la calidad de la información. Los codecs sin pérdida mantienen la calidad de la información, pero no reducen el tamaño por un gran márgen. Ambos codecs son usados para codificar video, audio y archivos de voz. Codecs con pérdida son AAC, MP3, Vorbis y Windows Media Audio con pérdida. FLAC, Monkey's Audio, Shorten, TTA, Windows Media Audio sin pérdida y WavPack son ejemplo de codecs sin pérdida.
+<br><br>
+<b>Códec de audio.</b>
+<br><br>
+Los codecs de voz codifican las diferentes características de la voz, mientras que los codecs de audio son usados para la música. Los codecs de voz buscan patrones específicos. Algunos codecs de voz son µ-Law PCM, ACELP, A-Law PCM, AMR-NB, AMR-WB y DV Audio. Los codecs de audio incluyen AAC, AIFF, AU y MP3.
+<br><br>
+<b>Códec de video</b>
+<br><br>
+Los codecs de video son usados para codificar y decodificar los archivos de video. La codificación con pérdida es la técnica de compresión más usada. Los codecs de video tratan de balancear el tamaño de la compresión con la calidad de la información. Huffyuv, DivX Pro Codec y x264 son algunos codecs de video.
+</p>
+
+<br><br>
+
+<section class="texto">
+<div class="subtitulos2">
+<br><strong>
+<h2>CÓDEC SIN PERDIDA DE INFORMACIÓN. </h2>
+</br></strong>
+</div>
+<br>
+<br>
+
+<p>Los códecs sin pérdida garantizan que no se pierdan datos durante la compresión, de modo que el contenido original se reproduzca perfectamente al descomprimirlo. Sin embargo, requieren un tamaño de archivo mayor para lograr este nivel de fidelidad. Cuando la capacidad de almacenamiento o el ancho de banda no son un problema, los códecs sin pérdidas son la mejor opción para obtener la máxima calidad.
+<br>
+Sin pérdidas permite a los autores, desarrolladores y consumidores tomar decisiones informadas cuando se trata de la gestión de medios digitales. Teniendo en cuenta factores como las limitaciones de espacio de almacenamiento, las limitaciones de ancho de banda y el nivel de calidad deseado, se puede elegir el códec más adecuado para un proyecto en particular. A medida que avanza la tecnología, pueden surgir nuevos códecs que ofrezcan algoritmos de compresión aún más eficientes sin sacrificar la calidad. El desarrollo constante en esta área garantiza que el mundo de los medios digitales siga siendo dinámico y en constante mejora.
+</p>
+<br><br>
+<section class="texto">
+<div class="subtitulos2">
+<br><strong>
+<h2>Tipos de codificación. </h2>
+</br></strong>
+</div>
+<br>
+
+<p><b>MP4:</b> MPEG-4 Parte 14 (MP4) es un formato de archivo de vídeo creado por Motion Picture Expert Group. Comprime el audio y el vídeo por separado, lo cual permite que los archivos MP4 conserven una calidad de vídeo relativamente alta tras la compresión. La mayoría de los navegadores y dispositivos iOS/Android son compatibles con los archivos MP4.
+</p>
+<br>
+
+<center>
+<br><br>
+<img src="mp4.png" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+
+<p><b>MOV:</b>QuickTime Movie (MOV) es un formato de archivo de vídeo creado por Apple. Aunque puede funcionar tanto en Mac OS como en Windows OS, solo es compatible con los reproductores de vídeo QuickTime. Conserva la calidad del vídeo, pero no ofrece tanta compresión de archivos como otros formatos de vídeo habituales, como el MP4.
+</p>
+<br>
+
+<center>
+<br><br>
+<img src="mov.png" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+
+<p><b>AVI:</b> Audio Video Interleave (AVI) es un formato de archivo de vídeo creado por Microsoft. Es una de las especificaciones de contenedores de archivos de vídeo más antiguas. AVI funciona con distintos códecs, lo cual puede afectar a su compatibilidad con distintos sistemas operativos y navegadores. Da prioridad a la calidad del vídeo sobre la compresión, lo que significa que los archivos de vídeo son más grandes y, en general, de mejor calidad.
+</p>
+<br>
+
+<center>
+<br><br>
+<img src="avi.png" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+
+<p><b>FLV:</b> Flash Video Format (FLV) es un formato de archivo de vídeo creado por Adobe Flash. Una clara ventaja de FLV es su capacidad para comprimir archivos de vídeo sin que se pierda la calidad del mismo. Sin embargo, es mucho menos compatible entre dispositivos y sistemas operativos que otros formatos de archivo: aunque es compatible con la mayoría de los navegadores y dispositivos Android, no se puede utilizar para reproducir ningún archivo de vídeo en dispositivos iOS como iPhone o iPad. 
+</p>
+<br>
+
+<center>
+<br><br>
+<img src="flv.png" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+
+<p><b>WebM:</b> WebM es un formato de archivo de vídeo desarrollado por Google. Es un subconjunto del formato estándar abierto Matroska Video Container (MKV), que se adapta a la mayoría de los códecs de vídeo y audio, y es compatible con una amplia gama de plataformas y dispositivos. WebM es una alternativa a MP4, de código abierto y fácil de usar, que mantiene una alta calidad de vídeo tras la compresión. Tanto MP4 como WebM son compatibles con HTML5.
+</p>
+<br>
+
+<center>
+<br><br>
+<img src="web.avif" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+<br>
+<br>
+
+
+<div class="subtitulos2">
+<br><br><strong>
+<h2>4.13¿QUÉ ES EL STREAMING?. </h2>
+</br></br></strong>
+</div>
+<br>
+<br>
+
+<center>
+<br><br>
+<img src="streaming2.avif" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+
+<section class="texto">
+<div class="subtitulos2">
+<br><strong>
+<h2>¿Qué es?. </h2>
+</br></strong>
+</div>
+<br>
+
+<p>Es un método de distribución de contenidos multimedia (audiovisuales) a través de redes informáticas, que transmite el contenido al instante mismo en que es consumido, sin que deba descargarse y almacenarse previamente. El término streaming proviene del inglés stream (“chorro” o “arroyo”) y hace alusión a la transmisión ininterrumpida del contenido audiovisual.Cada vez que ves un video de YouTube en tu teléfono, una película de Netflix en tu tablet o escuchas música de Spotify mientras trabajas con tu laptop, estás haciendo streaming.
+	<br>El término "streaming" se refiere a cualquier reproducción de audio, video y otro contenido multimedia en un dispositivo en tiempo real a través de Internet. Al hacer streaming, puedes ver o escuchar contenido sin tener que descargarlo antes en tu dispositivo. La tecnología de streaming, originalmente llamada de almacenamiento y reenvío de video1, envía pequeños paquetes de datos a través de Internet a un dispositivo y los reconstruye en contenido de audio o video que se pueden ver o escuchar sin retardos ni retrasos.
+	<br>
+	<br>
+	<b>DIFERENCIAS.</b>
+	<br>
+	<br>
+	Cuando hablamos de una emisión en directo, hablamos del envío de una señal desde un punto. Los receptores captan las ondas, las descodifican y muestran el contenido. Como te podrás imaginar, este es el sistema que se emplea para emitir desde la radio o la televisión. Para ver o escuchar un contenido en concreto, el usuario debe encender el aparato a la hora y la fecha en la que se emite.
+	<br>
+	<br>
+	A diferencia de las emisiones en directo, el streaming es un contenido alojado en Internet que se envía desde un servidor a un cliente (el dispositivo que utilizas para visualizar o escuchar el contenido). Esta tecnología es útil para emisiones en directo, que se suben a un servidor en tiempo real y que se transmiten a tantos dispositivos como sea necesario.
+</p>
+<br>
+
+
+<div class="subtitulos3">
+<br><strong>
+<h3>¿Para qué sirve?. </h3>
+</br></strong>
+</div>
+<br>
+
+<p>El streaming sirve, principalmente, para transmitir un contenido sin que sea necesario descargar archivos con anterioridad en la unidad de almacenamiento del dispositivo receptor. Teniendo esto en cuenta, podemos decir que las funciones de esta tecnología son variadas y que se puede aprovechar en distintos ámbitos.
+</p>
+<br>
+
+<div class="subtitulos3">
+<br><strong>
+<h3>Tipos de Streaming.. </h3>
+</br></strong>
+</div>
+<br>
+
+<ul>
+<p><li><b>Vídeo en directo.</b> Es una de las modalidades más conocidas del streaming. Es aquella que permite ver contenidos en directo, es decir, que se están produciendo en el momento de la visualización. Una de las plataformas más conocidas es Twitch, aunque también ofrecen este servicio otras redes sociales, como Instagram, Facebook o YouTube.</li>
+	<br>
+<li><b>Vídeo en diferido.</b> Se trata de la transmisión de contenido audiovisual que ha sido grabado y editado previamente. Para verlo, basta con acceder a la página o a la aplicación correspondiente y presionar en el botón de reproducción. El dispositivo irá descargando partes del vídeo a medida que avanza la visualización. YouTube es uno de los principales actores en este sector, aunque también podemos hablar de Netflix, Prime Video, HBO o Vimeo.</li>
+	<br>
+<li><b>Música.</b> Está relacionado con la reproducción de canciones y listas de reproducción sin descarga previa. Spotify es el nombre propio más recurrente de los servicios de música en streaming, aunque existen otros como Deezer o SoundCloud. Aquí también podríamos englobar los servicios de radio a la carta y los podcasts, que ya te contamos cómo escuchar en tu móvil.</li>
+	<br>
+<li><b>Aplicaciones y videojuegos.</b> La tecnología de streaming ahora permite jugar o utilizar apps sin necesidad de descarga previa. Esto es posible gracias a la comunicación entre el servidor, que envía datos, y el cliente, que responde a ellos con acciones.</li>
+	<br>
+<li><b>Streaming On-demand</b>Este tipo de streaming te permite ver películas, programas de televisión u otro tipo de contenido pregrabado cuando quieras. Servicios como Hulu, Netflix y otros servicios de streaming ofrecen contenido para hacer streaming on demand.</li>
+	<br>
+<li><b>Webcasting</b>Este término suele referirse al streaming de eventos en vivo a través de Internet, como conferencias de negocios o seminarios web.</li>
+<br>
+<li><b>Podcasting</b>Este tipo de contenido de audio suele tener un formato similar al de un programa de entrevistas y se transmite normalmente a través de servicios de streaming de música como Apple Music y Spotify.</li>
+</p></ul>
+<br>
+<br>
+
+<div class="subtitulos3">
+<br><strong>
+<h3>Otros usos. </h3>
+</br></strong>
+</div>
+<br>
+<br>
+
+<p>El streaming tiene usos que van más allá del consumo de películas y series y de la transmisión de conciertos o deportes. Con esta tecnología, se puede asistir a webinars (seminarios virtuales) o incluso cursar una carrera, por ejemplo.<br><br>
+
+La transmisión de clases en línea es muy útil para que una persona pueda estudiar en una institución educativa independientemente de su ubicación geográfica. Con una buena velocidad de Internet, se trata de una posibilidad de formación que debe tenerse en cuenta por las ventajas que brinda.
+
+Los videos en directo se suelen combinar con la opción de video bajo demanda cuando no es posible «asistir» a la clase en el momento de su desarrollo. Cabe destacar que esta alternativa educativa puede apelar al streaming en redes sociales (como conferencias vía Facebook Live o Instagram Live) e incluir interacciones por Zoom o Google Meet, por mencionar algunas posibilidades.<br><br>
+
+El streaming también puede ser muy importante en el terreno laboral. El director general de una compañía que desea informar algo a los responsables de las diversas filiales o sucursales de la empresa que se encuentran distribuidas en diferentes ciudades o hasta países puede hacerlo con una conferencia por Zoom.
+</p>
+<br>
+
+<div class="subtitulos3">
+<br><strong>
+<h3>Apps para su visualización. </h3>
+</br></strong>
+</div>
+<br>
+
+<ul>
+<p><b><li>Netflix</li>
+	<br>
+	<li>Amazon Prime Video</li>
+	<br>
+	<li>HBO Max</li>
+	<br>
+	<li>Hulu+</li>
+	<br>
+	<li>Paramount+</li>
+	<br>
+	<li>Star+</li>
+	<br>
+	<li>Disney+</li>
+	<br>
+	<li>Apple TV+</li>
+	<br>
+	y muchas más.....</b>
+</p></ul>
+<br>
+<center>
+<br><br>
+<img src="apps.jpg" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+
+<div class="subtitulos3">
+<br><strong>
+<h3>Apps de musica. </h3>
+</br></strong>
+</div>
+<br>
+<br>
+
+<ol>
+<p>
+<li><b>SoundCloud</b>Aunque su funcionamiento no es igual al del resto de plataformas de música digital, se ha convertido en la preferida por los músicos independientes. No hay canales de distribución y por ello, lograr el alcance deseado es cuesta arriba. Debido a sus enormes pérdidas en el 2018, han decidido dar un vuelco en su filosofía y desde el pasado mes de octubre premiará con su servicio SoundCloud Premier Monetization a los artistas que cuenten con más de 5 mil reproducciones en un single.<br><br>
+	Para la transmisión de alta calidad (HQ), utiliza un formato AAC a 256 kbps, lo que se compara con la calidad de un MP3 de 320 kbps. Para la transmisión estándar, la velocidad de transmisión es de 64 kbps en formato Opus, lo que se compara con un MP3 de 128 kbps. </li>
+	<center>
+<br><br>
+<img src="soun.png" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+<br><br>
+	<li><b>YouTube</b>Contrario a lo que nos hacen creer los youtubers de esta plataforma y de sus ganancias, Youtube es considerado una de las plataformas menos rentables de entre las 10 principales para la distribución musical; ten en cuenta que para generar ganancias que superen los 1500 dólares al mes deberás lograr al menos unas 2.173.913 reproducciones mensuales.<br><br>
+Para una buena experiencia de visualización en YouTube, se recomienda una velocidad de internet de al menos 2 Mbps para videos de baja calidad y hasta 20 Mbps para 4K UHD. Para ver videos en HD, se sugiere una velocidad de 5 Mbps para 1080p y 2.5 Mbps para 720p. Para una transmisión en vivo, se necesita una velocidad de carga de al menos 3.6 Mbps</li>
+<center>
+<br><br>
+<img src="youtubem.png" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+<br><br>
+	
+	<li><b>Pandora Premium</b>En su momento se posicionó como una de las principales plataformas de música digital con más usuarios en todos los Estados Unidos y las que más ganancias generaban a sus suscriptores gracias a su servicio de radio streaming. Tiene más de 80 millones de suscriptores. Luego y tras el nacimiento de otras plataformas de distribución musical empezó su debacle en el mundo digital. Hoy día y tras ser subastado y comprado por SiriusXM, Pandora paga a los artistas 0.0011 dólares por reproducción y a principios del 2018 aumentó ligeramente esta cifra a 0.0034 dólares, mejorando un poco en su servicio Premium donde la cifra asciende a 0.00133 dólares por reproducción; lo que quiere decir que para alcanzar los 1500 dólares mensuales, deberás lograr las 1.127.819 reproducciones por mes.<br><br>
+Las velocidades de transmisión de audio en Pandora dependen del tipo de plan que tengas y del dispositivo desde el que estás escuchando. En resumen, Pandora ofrece diferentes velocidades de transmisión desde 24 Kbps a 192 Kbps</li>
+<center>
+<br><br>
+<img src="pandora.png" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+<br><br>
+	<li><b>Amazon Music</b>Creada en el año 2007, Amazon tiene dentro de su catálogo más de 50 millones de canciones categorizadas en playlist y emisoras streamings. Aunque alcanza los casi 12 años de trayectoria aún no ha logrado encabezar las listas de los distribuidores que más ganancias generan a los artistas, pero sí ha logrado mantenerse en una férrea competencia con Spotify por los dividendos que les generan a los artistas. En el 2018 ha mejorado su cifra a 0.00402 dólares por play lo que mensualmente y para alcanzar un salario promedio suponen unas 366,169 reproducciones mensuales.<br><br>Para los suscriptores de Amazon Music Free y Amazon Music Prime, la transmisión es de hasta 320 kbps. Los suscriptores de Amazon Music Unlimited pueden acceder a audio de mayor calidad, incluyendo HD y Ultra HD, con velocidades de transmisión más altas. </li>
+<center>
+<br><br>
+<img src="amazon.png" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+<br><br>
+	<li><b>Spotify</b>En el 2018 este monstruo derrotó a Amazon Music mejorando su cifra a los 0.00437 dólares por reproducción. Es decir, los artistas necesitan superar los 336,842 plays para alcanzar unos 1400 -1500 dólares mensuales. Sin embargo y aunque Spotify no es el número uno de esta lista, se ha convertido en el líder mundial como la plataforma con más suscriptores y mayor presencia en la web; son más de 190 millones de usuarios activos mensuales subiendo y descargando contenido musical.<br><br>
+En Spotify gratuito, la calidad de transmisión puede ser de hasta 96 kbps para móviles y 160 kbps para ordenadores y la web. Los usuarios premium pueden disfrutar de una calidad de hasta 320 kbps. Además, las velocidades de transmisión pueden ser ajustadas en la app para dispositivos móviles y tabletas. </li>
+<center>
+<br><br>
+<img src="spoty.png" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+<br><br>
+	<li><b>Deezer</b>Si bien esta plataforma francesa no ha terminado de sentar bases en todos los Estados Unidos y Latinoamérica, en términos de pago supera a Spotify por 0.00187 dólares por reproducción, lo que se traducen a 230.000 reproducciones al mes si además de presencia buscas ganancias equiparables a un salario norteamericano. Por ahora, Deezer sigue extendiendo sus redes a nivel mundial y se encuentra disponible en 16 idiomas y cuenta con 16 millones de usuarios, 6 millones de ellos conectados a través del servicio Premium.<br><br>
+Deezer ofrece diferentes velocidades de transmisión según el tipo de suscripción y la calidad de audio deseada. En general, Deezer Premium y Deezer Family incluyen HiFi, lo que significa que puedes disfrutar de sonido sin pérdidas (FLAC) a una tasa de bits de 1411 kbps, con una velocidad de internet mínima recomendada de 5 Mb/s. Si no tienes HiFi, la calidad de alta calidad es de 320 kbps. </li>
+<center>
+<br><br>
+<img src="deezer.png" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+<br><br>
+	<li><b>Google Play Music</b>Solo tiene 7 años en el mundo de las plataformas de música digital y aunque mantiene en secreto las métricas de sus suscriptores, se estima que no alcanza los 10 millones de usuarios; no obstante, y según se rumorea en la industria musical una de las estrategias de Google Play Music para convertirse en el preferido de los artistas, se basa en pagar más por plays que muchos de sus contrincantes. Para que te hagas una idea, por reproducción ganas 0.00676 dólares, es decir, necesitarías 217.752 plays para alcanzar los casi 1500 dólares mensuales.<br><br>
+Google Play Music, actualmente reemplazado por YouTube Music, ofrecía transmisión de música en varias velocidades, desde 160 kbps hasta 320 kbps, con la posibilidad de mejorar la calidad con conexiones de alta velocidad. </li>
+<center>
+<br><br>
+<img src="googleplay.png" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+<br><br>
+	<li><b>Apple Music</b>Aunque desde esta plataforma de distribución musical manejan sus cifras con total hermetismo han dejado que el mundo se entere que en ganancias por reproducción casi duplica a Spotify. Hablamos de 0.00735 dólares por reproducción lo que traducido a plays mensuales serían 200.272, razón por la cual se mantienen en el top five de los preferidos por los artistas.<br><br>
+Apple Music ofrece diferentes velocidades de transmisión para el streaming de música, con opciones que van desde baja calidad hasta alta calidad sin pérdidas. Estas opciones afectan la calidad del sonido y el uso de datos. 
+		<br><br>
+<ul>
+Velocidades de transmisión y calidad del sonido:
+<li>Baja: Aproximadamente 64 kbps.</li>
+<li>Media: Aproximadamente 128 kbps.</li>
+<li>Alta: Aproximadamente 256 kbps.</li>
+<li>Sin pérdidas (Lossless): Ofrece una calidad de audio superior, con una resolución máxima de 24 bits/48 kHz.</li>
+<li>Hi-Res Lossless: Ofrece una calidad de audio aún mayor, con una resolución máxima de 24 bits/192 kHz.</li> 
+</ul></li>
+<center>
+<br><br>
+<img src="music.png" heigth="675px" width="1080px"/></br></br>
+</div>
+</center>
+<br><br>
+</p>
+</ol>
+
+<br>
+<br>
+<center><h2><b>EN LA PARTE INFERIOR ENCONTRARAS UN AUDIO DE EJEMPLO "DA CLIC Y DISFRUTA"</b></h2></center>
+<center>
+<br><br>
+	
+<img src="latinm.jpg" heigth="400px" width="500px"/></br></br>
+</div>
+</center>
+ <center>
+	<audio src="LATIN MAFIA, Jeese Baez - Se fue la luz(320 KBps).mp3" controls></audio>
+	</center>
+<br><br<
+    
+
+
+   </body>
+</html>
